@@ -112,5 +112,6 @@ module('Acceptance: title', function (hooks) {
 
     await visit('/posts/rails-is-omakase');
     assert.equal(currentTitle, 'Rails is Omakase | Posts | My App');
+    this.owner.unregister('service:page-title');
   });
 });
